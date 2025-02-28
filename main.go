@@ -6,8 +6,11 @@ import (
 	"text/template"
 )
 
-const contents = `{{ range $l := .}}{{ $l | trim }}
-{{ end }}`
+const contents = `
+{{- range $l := .}}
+{{- $l | trim }}
+{{ end -}}
+`
 
 const lines = `
 xxxx
